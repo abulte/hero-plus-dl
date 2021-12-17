@@ -22,3 +22,11 @@ python cli.py date-tree {path-where-your-videos-are}
 
 - Does not handle media library pagination (100 max I guess, I only had 88 at the time) ; should be easy to add if needed (and can be tested)
 - Does not handle pictures (Firefox does not download them by default)
+
+## Why
+
+- Select multiples files and download is _flawed_ on Hero Plus, it will "forget" some videos :facepalm:
+- You have to pay yearly to host your photos on Hero Plus and getting them out is difficult ATM
+- Sync from camera to Hero Plus is awfully slow
+- Hero Plus interface is bug-ridden and slow IMHO
+- —> I'd rather host and manipulate them on my own software stack
