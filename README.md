@@ -1,6 +1,6 @@
 # hero-plus-dl
 
-Download (free!) your photos/videos from GoPro Hero Plus service.
+Download (free!) your videos from GoPro Hero Plus service.
 
 This is quite unpolished but it did the job for a one time thing.
 
