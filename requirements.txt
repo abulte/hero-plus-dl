@@ -1,0 +1,3 @@
+minicli
+selenium
+ffmpeg-python
