@@ -82,16 +82,17 @@ def date_tree(path):
     """
     path = Path(path)
     assert path.resolve()
-    videos = path.glob("*.MP4")
+    videos = list(path.glob("*.MP4")) + list(path.glob("*.mp4"))
     for video in videos:
-        metadata = ffmpeg.probe(str(video)).get("format", {})
+        metadata = ffmpeg.probe(str(video)).get("format", {}).get("tags", {})
         creation_time = metadata.get("creation_time")
         if not creation_time:
             print(f"[ERROR] could not find metadata for {video}")
             continue
         creation_time = datetime.strptime(creation_time, "%Y-%m-%dT%H:%M:%S.%fZ")
         folder = creation_time.strftime("%Y-%m-%d")
-        folder_path = (path / folder).mkdir(parents=True, exist_ok=True)
+        folder_path = path / folder
+        folder_path.mkdir(parents=True, exist_ok=True)
         print(f"Moving {video.name} to {folder_path}...")
         shutil.move(video, folder_path / video.name)
 
