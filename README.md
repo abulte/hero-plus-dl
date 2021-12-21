@@ -30,3 +30,7 @@ python cli.py date-tree {path-where-your-videos-are}
 - Sync from camera to Hero Plus is awfully slow
 - Hero Plus interface is bug-ridden and slow IMHO
 - —> I'd rather host and manipulate them on my own software stack
+
+## See also
+
+https://github.com/abulte/pytube-server to process and serve downloaded videos.
